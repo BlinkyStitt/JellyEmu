@@ -38,3 +38,6 @@ jobs:
           for f in $(find Web Configuration -name "*.js"); do
             node -c "$f" || exit 1
           done
+
+      - name: Test offline downloads and device saves
+        run: node --test Tests/OfflineTests.mjs

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="JellyEmu">
+    <meta name="theme-color" content="#101820">
+    <title>JellyEmu Offline</title>
+    <link rel="manifest" href="{{ base_url }}/jellyemu/offline/manifest.webmanifest">
+    <style>
+        body { background:#101820; color:#fff; font:18px system-ui,sans-serif; margin:0;
+            padding:calc(24px + env(safe-area-inset-top)) 24px calc(24px + env(safe-area-inset-bottom)); }
+        main { max-width:650px; margin:auto; }
+        a { color:#81cfff; }
+        li { padding:20px 0; border-bottom:1px solid #52616b; list-style:none; }
+        ul { padding:0; }
+        button { font:inherit; margin:12px 16px 0 0; padding:10px; }
+        #je-offline-status { min-height:1.5em; }
+    </style>
+    <script src="{{ base_url }}/jellyemu/assets/coi-serviceworker.js"></script>
+    <script src="{{ base_url }}/jellyemu/assets/ejs.offline.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>JellyEmu Offline</h1>
+        <p>Open a game while connected and select “Download for offline play” in its settings.</p>
+        <p>On iPhone or iPad, use Safari's Share menu to add this page to the Home Screen.
+            Open that app while connected, then prepare your games there. Browser storage is separate.</p>
+        <p>Downloads and device saves stay on this device. Clearing website data removes them.</p>
+        <p id="je-offline-status" role="status"></p>
+        <ul id="je-offline-games"></ul>
+        <a href="{{ base_url }}/web/">Open Jellyfin</a>
+    </main>
+</body>
+</html>

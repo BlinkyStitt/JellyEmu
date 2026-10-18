@@ -68,6 +68,28 @@
 
 <div align="center">
 
+<h2>Offline play on iPhone and iPad</h2>
+
+Open a game, then use **Settings → Open offline games**. In Safari, use
+**Share → Add to Home Screen** and keep **Open as Web App** enabled.
+Open the installed app while connected, select **Open Jellyfin**, and sign in.
+Open the game and select **Settings → Download for offline play**.
+Keep the app open until it shows **Available offline**. Prepare downloads inside
+this installed app; Safari tabs and Home Screen apps use separate storage.
+
+Open the Home Screen app to choose a downloaded game without a server connection.
+Use **Saves & States → Save on Device / Load from Device** for a device-local state.
+Each account, game, and emulator core has its own device state. Saving replaces that
+state. Device states do not automatically upload to the cloud save slots.
+Removing a game download keeps its device state. Downloads keep the settings and
+startup state from preparation; download again to refresh them.
+
+Offline downloads require HTTPS (or localhost), website storage, a complete local
+EmulatorJS runtime on the server, and a single-ROM EmulatorJS game. Multi-disc
+playlists, Play! and PICO-8 downloads are not supported. Browser storage can run out
+or be removed by the system; clearing website data removes downloads and device
+states. Export important states with the existing **Export State** control.
+
 <h2>Documentation</h2>
 
 <table>

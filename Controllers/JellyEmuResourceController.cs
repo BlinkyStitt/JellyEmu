@@ -68,6 +68,13 @@ namespace JellyEmu.Controllers
             return ServeEmbeddedJs("ejs.input.js");
         }
 
+        /// <summary>Serves offline download and device save controls.</summary>
+        [HttpGet("/jellyemu/assets/ejs.offline.js")]
+        public IActionResult OfflineJs()
+        {
+            return ServeEmbeddedJs("ejs.offline.js");
+        }
+
         /// <summary>
         /// Serves the core options embedded JS resource.
         /// Path: GET /jellyemu/assets/ejs.core.js

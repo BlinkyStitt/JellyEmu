@@ -179,6 +179,12 @@
                     <div class="je-section-title" style="margin-top:0">Cloud Save States</div>
                     <div id="je-saves-body"></div>
                     
+                    <div class="je-section-title">Device Save State</div>
+                    <div style="display:flex;gap:10px;">
+                        <button class="je-btn" id="je-device-save">Save on Device</button>
+                        <button class="je-btn" id="je-device-load">Load from Device</button>
+                    </div>
+                    <small id="je-device-state-status" role="status"></small>
                     <div class="je-section-title">Local Save State</div>
                     <div style="display:flex;gap:10px;">
                         <button class="je-btn je-btn-primary" id="je-io-exp-state" style="flex:1">Export State (.state)</button>
@@ -329,6 +335,10 @@
                         <button class="je-btn" id="je-btn-clear-sys" style="color:#ff6b6b; border-color:rgba(255,100,100,0.3);">Reset Factory Defaults</button>
                     </div>
 
+                    <div class="je-section-title" style="margin-top:16px;">Offline Play</div>
+                    <button class="je-btn" id="je-offline-download">Download for offline play</button>
+                    <small id="je-offline-status" role="status"></small>
+                    <a href="{{ base_url }}/jellyemu/offline/" style="color:#81cfff">Open offline games</a>
                     <div class="je-section-title" style="margin-top:16px;">Game Cache</div>
                     <div class="je-setting" style="display:flex; justify-content:space-between; align-items:center;">
                         <div style="flex:1; padding-right:12px;">
@@ -1841,6 +1851,7 @@
     <script src="{{ base_url }}/jellyemu/assets/ejs.input.js?v={{ version }}"></script>
     <script src="{{ base_url }}/jellyemu/assets/ejs.core.js?v={{ version }}"></script>
     <script src="{{ base_url }}/jellyemu/assets/ejs.save.js?v={{ version }}"></script>
+    <script src="{{ base_url }}/jellyemu/assets/ejs.offline.js?v={{ version }}"></script>
     <script src="{{ base_url }}/jellyemu/assets/ejs.setting.js?v={{ version }}"></script>
     <script src="{{ base_url }}/jellyemu/assets/ejs.xr.js?v={{ version }}"></script>
     <script src="{{ base_url }}/jellyemu/assets/ejs.netplay.js?v={{ version }}"></script>
