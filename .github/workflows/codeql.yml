@@ -8,6 +8,10 @@ on:
   schedule:
     - cron: '0 6 * * 1' # Runs every Monday morning
 
+concurrency:
+  group: pr-ci-codeql.yml-${{ github.event_name }}-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
+
 jobs:
   analyze:
     name: Analyze Code Security
