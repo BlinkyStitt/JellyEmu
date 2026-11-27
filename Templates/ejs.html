@@ -610,6 +610,10 @@
 
             window.EJS_core = '{{ core }}';
             window.EJS_platformTag = '{{ platform_tag }}';
+            // A shared Sega core can default to the Master System layout.
+            if (window.EJS_platformTag === 'Sega Genesis') {
+                window.EJS_controlScheme = 'segaMD';
+            }
             var biosUrl = '{{ bios_url }}';
             if (biosUrl && biosUrl.trim().length > 0) {
                 window.EJS_biosUrl = biosUrl.startsWith('http') ? biosUrl : (window.location.origin + biosUrl);
